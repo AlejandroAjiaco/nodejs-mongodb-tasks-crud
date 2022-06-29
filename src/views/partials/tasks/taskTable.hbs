@@ -1,0 +1,34 @@
+<table class="table table-bordered table-hover table-dark">
+  <thead>
+    <tr>
+      <th class="text-center" >Num</th>
+      <th class="text-center" >Nombre</th>
+      <th class="text-center">Descripcion</th>
+      <th class="text-center">Celular</th>
+      <th class="text-center"> Operaciones</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    {{#each tasks}}
+      <tr>
+        <td class="text-center">{{@index}}</td>
+        <td>{{title}} </td>
+        <td>{{description}} </td>
+        <td>{{celular}}</td>
+        <td>
+
+          {{#if done}}
+            <a href="/toggleDone/{{_id}}" class=" btn btn-success">Realizada</a>
+          {{else}}
+            <a href="/toggleDone/{{_id}}" class="btn btn-warning">En espera</a>
+          {{/if}}
+
+          <a href="/delete/{{_id}}" class="btn btn-danger">Eliminar</a>
+          <a href="/edit/{{_id}}" class="btn btn-info">Actualizar</a>
+        </td>
+      </tr>
+    
+    {{/each}}
+  </tbody>
+</table>
