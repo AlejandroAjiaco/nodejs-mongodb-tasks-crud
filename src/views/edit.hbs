@@ -1,22 +1,38 @@
 <div class="container bd-dark">
-    <div class="row">
-        <div class="col-md-6 offsed-md-4">
-            <div class="card card-body bg-primary p-4 text-white">
+  <div class="row">
+    <div class="col-md-6 offsed-md-4">
+      <div class="card card-body bg-primary p-4 text-white">
 
-                <h1 class="text-white" class="mt-2">Actualizacion de datos</h1>
-    <form action="/edit/{{task._id}}" method="post">
-<label for="">Ingrese el nombre del cliente:</label>
-<input type="text" name="title" placeholder="Nombre" value="{{task.title}}" class="form-control rounded-0 bg-white text-black mt-1 " />
-<label for="description">Datos relevantes:</label>
-<textarea name="description" rows="3" placeholder="Fecha instalacion-Direccion-Observaciones" class="form-control rounded-0 bg-white text-black mt-1" >{{task.description}}</textarea> 
-<label for="celular">Celular:</label>
-<input type="text" name="celular" placeholder="celular" value="{{task.celular}}" class="form-control rounded-0 bg-white text-black mt-1" />
-<button class="btn btn-success btn-sm mt-2">Actualizar</button>
+        <h1 class="text-white" class="mt-2">Actualizacion de datos</h1>
+        <form action="/edit/{{task._id}}" method="post">
+          <label for="">Ingrese el nombre del cliente:</label>
+          <input
+            type="text"
+            name="title"
+            placeholder="Nombre"
+            value="{{task.title}}"
+            class="form-control rounded-0 bg-white text-black mt-1"
+          />
+          <label for="description">Datos relevantes:</label>
+          <textarea
+            name="description"
+            rows="3"
+            placeholder="Fecha instalacion-Direccion-Observaciones"
+            class="form-control rounded-0 bg-white text-black mt-1"
+          >{{task.description}}</textarea>
+          <label for="celular">Celular:</label>
+          <input
+            type="text"
+            name="celular"
+            placeholder="celular"
+            value="{{task.celular}}"
+            class="form-control rounded-0 bg-white text-black mt-1"
+          />
+          <button class="btn btn-success btn-sm mt-2">Actualizar</button>
 
+        </form>
+      </div>
 
-</form>
-</div>
-            
-        </div>
     </div>
+  </div>
 </div>
